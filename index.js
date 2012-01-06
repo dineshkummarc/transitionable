@@ -22,10 +22,11 @@ $$('a[data-property]').forEach(function(el, i){
 	var selector = '#' + id.replace(/([^\w-])/g, '\\$1'),
 		ident = id.replace(/([^\w-])/g, '-');
 	
-	css.push('@keyframes ' + ident + '{',
-			'from{' + property + ':' + from + '}',
-			'to{' + property + ':' + to + '}}',
-			selector + ' { animation: ' + ident + ' 1s infinite alternate;' + property + ':' + from + '}');
+	css.push(selector + ' {',
+			'  ' + property + ': ' + from + ';',
+			'  transition: ' + property + ' 1s linear',
+			'}',
+			selector + ':hover' + ' {' + property + ': ' + to + '}');
 });
 
 var style = document.createElement('style');

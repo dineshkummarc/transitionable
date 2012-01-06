@@ -54,10 +54,10 @@ div[role="main"]:after {
 		opacity: .2 !important;
 	}
 	
-	#on-hover:checked ~ div[role="main"] > a[data-property]:not(:hover):not(:target),
+/*	#on-hover:checked ~ div[role="main"] > a[data-property]:not(:hover):not(:target),
 	body.in-page a[data-property]:not(:target) {
 		animation: none !important;
-	}
+	} */
 	
 		a[data-property]:after {
 			content: attr(data-property);
